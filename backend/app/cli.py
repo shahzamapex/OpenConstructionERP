@@ -2035,7 +2035,7 @@ def cmd_seed(args: argparse.Namespace) -> None:
             from app.database import async_session_factory
 
             async with async_session_factory() as session:
-                result = await install_demo_project(session, "office_tower_berlin")
+                result = await install_demo_project(session, "residential-berlin")
                 await session.commit()
                 print(f"Demo project installed: {result.get('project_name', 'OK')}")
 
