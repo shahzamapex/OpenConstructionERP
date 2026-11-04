@@ -1,0 +1,1 @@
+function u(c,t,n,e){const o={...t,[n]:e};if(!e||(c[n]??"")===e)return o;for(const[s,i]of Object.entries(o))s!==n&&i===e&&(o[s]="");return o}function r(c,t){const n={};for(const[e,o]of Object.entries(t))(c[e]??"")!==o&&(n[e]=o);return n}function f(c,t){const n=r(c,t);return Object.keys(n).length>0?JSON.stringify(n):null}export{u as a,f as b,r as c};

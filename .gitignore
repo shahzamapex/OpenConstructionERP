@@ -535,3 +535,4 @@ email-delivery-failures*.jsonl
 .sf/
 run.bat
 start.ps1
+.vercel

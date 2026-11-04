@@ -1,0 +1,1 @@
+const e=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;function f(n,t){const a=t==null?void 0:t.trim();if(a)return{kind:"named",name:a};const i=n==null?void 0:n.trim();return i?e.test(i)?{kind:"unresolved"}:{kind:"named",name:i}:{kind:"none"}}export{f as r};

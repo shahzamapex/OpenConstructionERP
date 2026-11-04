@@ -1,0 +1,1 @@
+function r(e,a){return`/api/v1/validation/reports/${encodeURIComponent(e)}/export.${a}`}function i(e,a={}){return`validation_findings_${(a.boqId||a.reportId||"").trim().replace(/[^A-Za-z0-9_-]/g,"").slice(0,12)||"report"}.${e}`}export{i as a,r as v};

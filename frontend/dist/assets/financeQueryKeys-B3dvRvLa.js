@@ -1,0 +1,1 @@
+function i(n){const e=n[0];return typeof e!="string"?!1:e==="finance"||e.startsWith("finance-")||e==="procurement-po"}function r(n){return n.invalidateQueries({predicate:e=>i(e.queryKey)})}export{r as i};

@@ -1,21 +1,15 @@
 {
-  "version": 2,
-  "builds": [
+  "outputDirectory": "frontend/dist",
+  "buildCommand": "echo Frontend assets ready",
+  "cleanUrls": true,
+  "rewrites": [
     {
-      "src": "api/index.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxDuration": 60
-      }
-    }
-  ],
-  "routes": [
+      "source": "/api/:match*",
+      "destination": "https://openconstruction-backend.onrender.com/api/:match*"
+    },
     {
-      "src": "/(.*)",
-      "dest": "api/index.py"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
-  "env": {
-    "APP_ENV": "production"
-  }
+  ]
 }

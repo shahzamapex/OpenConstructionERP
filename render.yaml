@@ -1,0 +1,39 @@
+# OpenConstructionERP — Render Blueprint
+#
+# Deploy on Render:
+# 1. Push changes to GitHub (shahzamapex/OpenConstructionERP)
+# 2. In Render Dashboard (https://dashboard.render.com): Click "New +" -> "Blueprint"
+# 3. Select repository: shahzamapex/OpenConstructionERP
+# 4. Render will provision the PostgreSQL database and Docker web service automatically
+
+services:
+  - type: web
+    name: openconstruction-backend
+    runtime: docker
+    dockerfilePath: deploy/docker/Dockerfile.backend
+    dockerContext: .
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: SERVE_FRONTEND
+        value: "false"
+      - key: APP_ENV
+        value: production
+      - key: ALLOWED_ORIGINS
+        value: "https://openconstruction-backend.vercel.app,http://localhost:5173,http://localhost:8080"
+      - key: VECTOR_BACKEND
+        value: lancedb
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: openconstruction-db
+          property: connectionString
+
+databases:
+  - name: openconstruction-db
+    plan: starter
+    databaseName: openconstruction
+    user: oe

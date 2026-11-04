@@ -1,0 +1,1 @@
+import{g as o,G as t,v as e}from"./vendor-pdf-wHJmZXq4.js";t.workerSrc=new URL("/assets/pdf.worker.min-BmVo14Nb.mjs",import.meta.url).toString();const r=`/assets/pdfjs/${e}/`;function a(s){return o({data:s,wasmUrl:`${r}wasm/`,iccUrl:`${r}iccs/`})}function i(s){s==null||s.loadingTask.destroy()}export{i as c,a as o};

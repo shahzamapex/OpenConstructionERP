@@ -1,0 +1,1 @@
+function s(e){return`modules.catalog.${e.replace(/^oe_/,"")}`}function o(e,r){if(!e||!r)return;const i=e[r];if(i&&i.trim())return i;const t=r.split("-")[0],n=!t||t===r?void 0:e[t];return n&&n.trim()?n:void 0}function a(e,r,i){const t=e.display_name,n=r(s(e.name),{defaultValue:t});return n&&n!==t?n:o(e.display_name_i18n,i)??t}export{s as m,a as r};

@@ -17,7 +17,11 @@ import { cacheResponse, getCachedResponse, queueMutation } from './offlineStore'
 import { logApiError, logError } from './errorLogger';
 import { getDigitSystem } from './intlLocale';
 
-const BASE_URL = '/api';
+const BASE_URL = (() => {
+  const envUrl = (import.meta.env?.VITE_API_URL as string | undefined)?.trim();
+  if (!envUrl) return '/api';
+  return envUrl.endsWith('/api') ? envUrl : `${envUrl.replace(/\/+$/, '')}/api`;
+})();
 
 /**
  * Public API base path — exported for callers that need to bypass the

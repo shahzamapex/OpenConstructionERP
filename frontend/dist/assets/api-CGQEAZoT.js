@@ -1,0 +1,1 @@
+import{o as e,c as n}from"./index-ACXICuXA.js";const c="/v1/connectors",r=o=>n(`${c}/sources/?project_id=${encodeURIComponent(o)}`),a=(o,s)=>e(`${c}/sources/?project_id=${encodeURIComponent(o)}`,s),p=o=>e(`${c}/sources/${o}/sync`,{});export{a as c,r as l,p as s};

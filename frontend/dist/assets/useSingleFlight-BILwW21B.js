@@ -1,0 +1,1 @@
+import{r as t}from"./vendor-react-CubDQ7e2.js";function c(){const r=t.useRef(!1);return t.useCallback(n=>{if(r.current)return;r.current=!0;let e;try{e=n()}catch{r.current=!1;return}e.then(()=>{r.current=!1},()=>{r.current=!1})},[])}export{c as u};

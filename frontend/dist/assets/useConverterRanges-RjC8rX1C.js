@@ -1,0 +1,1 @@
+import{u as t}from"./vendor-query-C8Q3gDnG.js";import{aA as s}from"./index-ACXICuXA.js";function u(o){const{data:r}=t({queryKey:["bim-converters"],queryFn:()=>s(),staleTime:6e4}),n=new Map(((r==null?void 0:r.converters)??[]).map(e=>[e.id,e.format_range]));return o.map(e=>n.get(e)).filter(e=>!!e).join(" · ")}export{u};

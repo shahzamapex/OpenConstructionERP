@@ -1,0 +1,1 @@
+import{r as t,j as u}from"./vendor-react-CubDQ7e2.js";function g({face:s,className:o,style:e,width:a,height:n}){const[c,r]=t.useState(!1),[l,i]=t.useState(s.src);return s.src!==l&&(i(s.src),r(!1)),u.jsx("img",{src:c?s.pooled:s.src,alt:"",loading:"lazy",decoding:"async",width:a,height:n,draggable:!1,onError:()=>r(!0),className:o,style:e})}export{g as C};
